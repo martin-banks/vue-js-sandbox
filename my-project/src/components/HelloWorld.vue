@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 v-on:click="randomizer">{{ msg }}</h1>
     <h2>{{ intro }}</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -21,24 +21,31 @@
 </template>
 
 <script>
-const randomWords = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reiciendis architecto expedita esse in voluptatibus assumenda quas explicabo, eius facere doloribus perspiciatis autem repellat laudantium debitis odit quidem vitae dicta.'.split(' ')
 
 let data = {
   msg: 'Hi',
-  intro: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reiciendis architecto expedita esse in voluptatibus assumenda quas explicabo, eius facere doloribus perspiciatis autem repellat laudantium debitis odit quidem vitae dicta.'
+  intro: 'Some sort of intro',
 }
+let randomWords = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reiciendis architecto expedita esse in voluptatibus assumenda quas explicabo, eius facere doloribus perspiciatis autem repellat laudantium debitis odit quidem vitae dicta.'.split(' ')
 export default {
   name: 'HelloWorld',
-
+  props: {},
   data () {
     return data
   },
+  methods: {
+    randomizer () {
+      const newWord = randomWords[Math.floor(Math.random() * (randomWords.length - 1))]
+      data.msg = newWord
+      console.log(newWord)
+    }
+  }
 }
 
 
-setInterval(function() {
-  data.msg = randomWords[Math.floor(Math.random() * (randomWords.length - 1))]
-}, 1000);
+// setInterval(function() {
+//   data.msg = randomWords[Math.floor(Math.random() * (randomWords.length - 1))]
+// }, 1000);
 
 </script>
 
