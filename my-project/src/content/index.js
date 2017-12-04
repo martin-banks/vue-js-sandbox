@@ -1,4 +1,21 @@
 export default {
+	list: [
+		{
+			text: 'first',
+			id: 1,
+			seen: false,
+		},
+		{
+			text: 'second',
+			id: 2,
+			seen: false,
+		},
+		{
+			text: 'another one',
+			id: 3,
+			seen: true,
+		},
+	],
 	card: {
 		title: {
 			text: 'Toggle card',

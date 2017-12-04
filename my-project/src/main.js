@@ -6,6 +6,7 @@ import router from './router'
 
 import comp from './components/card'
 
+
 Vue.config.productionTip = false
 
 
@@ -13,9 +14,9 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   data: {
-      msg: 'Hi',
-      intro: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reiciendis architecto expedita esse in voluptatibus assumenda quas explicabo, eius facere doloribus perspiciatis autem repellat laudantium debitis odit quidem vitae dicta.'
-    },
+    msg: 'Hi',
+    intro: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reiciendis architecto expedita esse in voluptatibus assumenda quas explicabo, eius facere doloribus perspiciatis autem repellat laudantium debitis odit quidem vitae dicta.'
+  },
   router,
   template: '<App/>',
   components: { App }
