@@ -42,5 +42,10 @@
 
 
 <style scoped>
-	
+	.test-card {
+		padding: 24px;
+		border: solid 5px #bada55;
+		border-radius: 24px;
+		margin-bottom: 24px;
+	}
 </style>

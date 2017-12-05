@@ -3,7 +3,7 @@ import Vue from 'vue'
 export default Vue.component('test-card', {
 	name: 'test-card',
 	props: ['content'],
-	template: `<div>
+	template: `<div class="test-card">
 		<h3>{{ content.title.text }}</h3>
 		<p v-if="content.par.seen">
 			{{ content.par.text }}
