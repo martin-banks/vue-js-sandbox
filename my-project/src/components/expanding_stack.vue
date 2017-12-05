@@ -8,11 +8,13 @@
 		<section class="wrapper">
 			<test-card 
 				v-for="(card, index) in cards"
-				:content="card"
-				:key="index"
+				v-bind:content="card"
+				v-bind:key="index"
 			/>
 		</section>
 
+		<button v-on:click="changeRandom">Toggle random</button>
+		<button v-on:click="changeAll">Toggle all</button>
 
 	</div>
 </template>
@@ -23,6 +25,16 @@
 	export default {
 		data () {
 			return content
+		},
+		methods: {
+			changeRandom () {
+				console.log('click')
+				const random = Math.floor(Math.random() * (this.cards.length - 1))
+				this.cards[random].par.seen = !this.cards[random].par.seen 
+			},
+			changeAll () {
+				this.cards.forEach(c => c.par.seen = !c.par.seen)
+			}
 		}
 	}
 </script>
