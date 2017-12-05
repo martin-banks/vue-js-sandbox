@@ -1,31 +1,6 @@
 export default {
-	list: [
-		{
-			text: 'first',
-			id: 1,
-			seen: false,
-		},
-		{
-			text: 'second',
-			id: 2,
-			seen: false,
-		},
-		{
-			text: 'another one',
-			id: 3,
-			seen: true,
-		},
-	],
-	card: {
-		title: {
-			text: 'Toggle card',
-			seen: true,
-		},
-		par: {
-			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus incidunt et blanditiis temporibus id quos alias, consectetur! Rerum libero doloribus, ipsum cum optio reiciendis eos cumque, neque ratione quibusdam officiis.',
-			seen: false
-		}
-	},
+	title: 'Expanding card stack',
+	intro: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex fugit beatae error at dolore eligendi dolorem, pariatur provident consequatur aliquid aliquam deserunt, nam ipsam repellat nostrum facere minima, sit iure.',
 	cards: [
 		{
 			id: 1,

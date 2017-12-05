@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Remove router for spa</h1>
+    <!-- <h1>Remove router for spa</h1> -->
     <router-view/>
   </div>
 </template>
