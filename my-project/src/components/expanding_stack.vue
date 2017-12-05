@@ -5,7 +5,7 @@
 			<p>{{ intro }}</p>
 		</section>
 
-		<section class="wrapper">
+		<section :class="[$style.newModuleStlye]">
 			<test-card 
 				v-for="(card, index) in cards"
 				v-bind:content="card"
@@ -22,6 +22,7 @@
 
 <script>
 	import content from '../content/expanding_stack'
+
 	export default {
 		data () {
 			return content
@@ -41,11 +42,7 @@
 
 
 
-<style scoped>
-	.test-card {
-		padding: 24px;
-		border: solid 5px #bada55;
-		border-radius: 24px;
-		margin-bottom: 24px;
-	}
+<style modules lang="scss" scoped>
+	@import '../styleguide/index.sass'
+
 </style>
