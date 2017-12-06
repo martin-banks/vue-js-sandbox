@@ -5,7 +5,7 @@
 			<p>{{ intro }}</p>
 		</section>
 
-		<section :class="[$style.newModuleStlye]">
+		<section class="newModuleStlye">
 			<test-card 
 				v-for="(card, index) in cards"
 				v-bind:content="card"
@@ -42,7 +42,9 @@
 
 
 
-<style modules lang="scss" scoped>
+<style modules lang="sass" scoped>
 	@import '../styleguide/index.sass'
+
+	// sass can be written here
 
 </style>
