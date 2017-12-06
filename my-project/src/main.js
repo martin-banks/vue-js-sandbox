@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 
 import comp from './components/card'
+import question from './components/question'
 
 
 Vue.config.productionTip = false

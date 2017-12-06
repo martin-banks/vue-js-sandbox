@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div :id="$style.app">
     <!-- <h1>Remove router for spa</h1> -->
     <router-view/>
   </div>
@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style module>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,5 +19,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h2 {
+  color: pink;
 }
 </style>
