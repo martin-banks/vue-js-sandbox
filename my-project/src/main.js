@@ -6,6 +6,7 @@ import router from './router'
 
 import comp from './components/card'
 import question from './components/question'
+import quizButton from './components/button'
 
 
 Vue.config.productionTip = false

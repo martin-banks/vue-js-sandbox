@@ -7,20 +7,20 @@ export default Vue.component('question', {
 	props: ['item', 'score'],
 	template: `<div class="">
 		<h2 class="${Styles.question__test}">{{ item.question }}</h2>
-		<button v-on:click="check">{{ item.options[0] }}</button>
-		<button v-on:click="check">{{ item.options[1] }}</button>
-		<button v-on:click="check">{{ item.options[2] }}</button>
-		<button v-on:click="check">{{ item.options[3] }}</button>
-		<button v-on:click="check">{{ item.options[4] }}</button>
+		<quiz-button
+			v-for="(option, index) in item.options"
+			:text="option"
+			:key="index"
+			@clicked="clicked"
+		/>
 	</div>`,
 
 	methods: {
-		check (e) {
+		clicked (answer) {
 			if (this.item.disabled) return
-			console.log('click', e.target.innerText)
-			const isCorrect = e.target.innerText === this.item.answer
+			const isCorrect = answer === this.item.answer
 			if (isCorrect) {
-				this.$emit('answer', e.target.innerText)
+				this.$emit('answer', answer)
 				this.item.disabled = true
 			}
 		}
