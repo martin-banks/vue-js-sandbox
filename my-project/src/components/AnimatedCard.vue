@@ -1,14 +1,10 @@
 <template>
 	<div class="test-card">
-		<h3>{{ label }} - {{ content.title.text }}</h3>
+		<h3>{{ label }} - {{ title.text }}</h3>
 
 		<transition name="anim">
-			<p v-if="seen">{{ content.par.text }}</p>
+			<p v-if="open">{{ par.text }}</p>
 		</transition>
-
-		<button
-			v-on:click="toggle"
-		>Toggle words</button>
 	</div>
 </template>
 
@@ -16,17 +12,22 @@
 <script>
 	export default {
 		name: 'animated-card',
-		props: ['content', 'label'],
+		props: [
+			'par',
+			'title',
+			'label',
+			'open'
+		],
 		data() {
 			return {
 				seen: false
 			}
 		},
-		methods: {
-			toggle() {
-				this.seen = !this.seen
-			},
-		},
+		// methods: {
+		// 	toggle() {
+		// 		this.seen = !this.seen
+		// 	},
+		// },
 	}
 
 
@@ -36,5 +37,26 @@
 <style modules lang="sass" scoped>
 	@import '../styleguide/index.sass'
 
+	.fade-enter-active, .fade-leave-active
+		transition: opacity .5s
+
+	.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+		opacity: 0
+
+
+
+	.test-card 
+		border: solid 1px grey !important
+
+	.anim-enter
+		opacity: 0 !important
+		/* transform: rotate(720deg)*/
+
+	.anim-enter-active
+		transition: all 1s !important
+
+	.anim-enter-to
+		opacity: 1 !important
+		transform: rotate(0deg)
 
 </style>
