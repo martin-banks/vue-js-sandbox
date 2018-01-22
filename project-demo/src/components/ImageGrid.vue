@@ -18,22 +18,28 @@
 @import ../styleguide/index.sass
 
 $flipTransition: 500ms
+
 .imageGrid
 	display: flex
 	flex-wrap: wrap
 	perspective: 800px
+	// margin-bottom: $space-4
 
 .wrapper
 	transition: all $flipTransition linear 0ms
-	position: relative
 	flex: 1
 	height: auto
 	width: 50%
-	border: solid 1px
 	min-width: 200px
+	box-sizing: border-box
+	vertical-align: top
+	margin: 0
+	padding: 0
+
 
 img
 	position: relative
+	display: block
 	width: 100%
 
 p
@@ -41,17 +47,22 @@ p
 	position: absolute
 	width: 100%
 	top: 50%
-	transform: translateY(-50%)
+	transform: translateY(-50%) rotateY(180deg)
 	padding: 0
 	margin: 0
 	text-align: center
+	opacity: 0
+	+robotoCond-bold
+	+fluidtype-3
+	color: $color-white
+	+shadow-text-1
 
 .wrapper[data-active=true]
 	// transform: rotate3d(0, 1, 0, 180deg)
 	transform: rotateY(180deg)
 	z-index: 100
 	p
-		opacity: 0
+		opacity: 1
 
 
 </style>
