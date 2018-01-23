@@ -1,13 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import App from '@/views/Home'
+
 import HelloWorld from '@/components/HelloWorld'
 import DemoCard from '@/views/DemoCard'
 import QuizMulti from '@/views/QuizMulti'
+import BigPicture from '@/views/BigPicture'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: App,
+    },
     {
       path: '/democard',
       name: 'DemoCard',
@@ -17,6 +25,11 @@ export default new Router({
       path: '/quiz',
       name: 'QuizMulti',
       component: QuizMulti,
+    },
+    {
+      path: '/image',
+      name: 'BigPicture',
+      component: BigPicture,
     },
   ]
 })
