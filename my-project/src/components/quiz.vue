@@ -40,6 +40,15 @@
 			randomised.push(update.options[randomInd])
 			update.options.splice(randomInd, 1)
 		}
+		// const randomised = [... new Array(update.option.length)]
+		// 	.reduce((prev, cur, i, arr) => {
+		// 		let output = prev
+		// 		const random = Math.floor(Math.random() * arr.length)
+		// 		const newItem = update.options[random]
+		// 		output.push(newItem)
+		// 		return output
+		// 	}, [] )
+
 		update.options = randomised
 		return update
 
