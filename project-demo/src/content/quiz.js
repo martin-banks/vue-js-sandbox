@@ -11,7 +11,7 @@ export default {
 			hint: 'This is a hint',
 		},
 		{
-			question: 'How many squares on a Monopoly board',
+			question: 'How many squares are on a Monopoly board',
 			answer: '40',
 			image: 'https://source.unsplash.com/random',
 			options: [
