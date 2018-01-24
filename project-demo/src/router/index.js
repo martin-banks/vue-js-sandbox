@@ -6,6 +6,7 @@ import HelloWorld from '@/components/HelloWorld'
 import DemoCard from '@/views/DemoCard'
 import QuizMulti from '@/views/QuizMulti'
 import BigPicture from '@/views/BigPicture'
+import GridExpander from '@/views/GridExpander'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/image',
       name: 'BigPicture',
       component: BigPicture,
+    },
+    {
+      path: '/expander',
+      name: 'GridExpander',
+      component: GridExpander,
     },
   ]
 })
