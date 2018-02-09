@@ -1,6 +1,9 @@
 
 <template>
   <div id="app">
+    <ul>
+      <li v-for="(x, i) in 5">Item: {{ i }}</li>
+    </ul>
     <router-view />
   </div>
 </template>
